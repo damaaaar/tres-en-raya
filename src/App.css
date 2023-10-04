@@ -1,0 +1,13 @@
+:root {
+  --primary-color: #7e7b7b;
+  --secundary-color: #373535;
+  --white: #ffffff;
+  --selected: rgba(19, 190, 88, 0.5);
+}
+
+body {
+  background: var(--primary-color);
+  color: var(--white);
+  display: grid;
+  place-items: center;
+}

@@ -1,0 +1,16 @@
+.square {
+  background: #ececec;
+  width: 5rem;
+  height: 5rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  display: grid;
+  place-items: center;
+  transition: background 0.2s ease;
+  font-size: 2.5rem;
+}
+
+.square:hover {
+  background: var(--secundary-color);
+  cursor: pointer;
+}
