@@ -7,7 +7,9 @@ import "./Board.css";
 import Square from "../Square";
 import Winner from "../Winner/index.jsx";
 
-function Board() {
+function Board(props) {
+  const { controlTurn, setControlTurn } = props;
+
   const [board, setBoard] = useState(Array(9).fill(null));
   const [turn, setTurn] = useState(TURNS.X);
   const [winner, setWinner] = useState(null);
@@ -22,6 +24,7 @@ function Board() {
     newBoard[i] = turn;
     setBoard(newBoard);
     turn === TURNS.X ? setTurn(TURNS.O) : setTurn(TURNS.X);
+    controlTurn === TURNS.X ? setControlTurn(TURNS.O) : setControlTurn(TURNS.X);
 
     const newWinner = checkWinner(newBoard);
 
@@ -37,6 +40,7 @@ function Board() {
     setBoard(Array(9).fill(null));
     setTurn(TURNS.X);
     setWinner(null);
+    setControlTurn(TURNS.X);
   };
 
   return (

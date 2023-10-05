@@ -1,5 +1,5 @@
 .square {
-  background: #ececec;
+  background: var(--square-color);
   width: 5rem;
   height: 5rem;
   padding: 0.5rem;
@@ -15,7 +15,7 @@
   cursor: pointer;
 }
 
-@media (width < 500px) {
+@media (width < 700px) {
   .square:hover {
     background: #ececec;
   }

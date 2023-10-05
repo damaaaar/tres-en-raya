@@ -1,0 +1,13 @@
+.game {
+  display: flex;
+  gap: 10px;
+  background: #929292;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+@media (width < 700px) {
+  .game {
+    flex-direction: column;
+  }
+}

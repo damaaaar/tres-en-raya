@@ -1,0 +1,9 @@
+.control {
+  display: grid;
+  place-items: center;
+}
+
+.control-points {
+  display: flex;
+  gap: 10px;
+}
