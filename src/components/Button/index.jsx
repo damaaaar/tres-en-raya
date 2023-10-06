@@ -1,14 +1,14 @@
 import "./Button.css";
 
 function Button(props) {
-  const { functionButton } = props;
+  const { functionButton, text, styles } = props;
 
   const handleClick = () => {
     functionButton();
   };
   return (
-    <button className="button" type="submit" onClick={handleClick}>
-      Reiniciar juego
+    <button className={styles} type="submit" onClick={handleClick}>
+      {text}
     </button>
   );
 }

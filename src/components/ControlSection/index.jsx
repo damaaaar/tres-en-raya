@@ -1,9 +1,11 @@
 import "./ControlSection.css";
 import Player from "../Player";
+import Button from "../Button";
+
 import { TURNS } from "../../constants";
 
 function ControlSection(props) {
-  const { controlTurn, pointsX, tiePoints, pointsO } = props;
+  const { controlTurn, pointsX, tiePoints, pointsO, resetPoints } = props;
 
   return (
     <section className="control">
@@ -20,6 +22,11 @@ function ControlSection(props) {
           selected={controlTurn === TURNS.O}
         />
       </div>
+      <Button
+        functionButton={resetPoints}
+        text="Limpiar puntajes"
+        styles="button-reset-points"
+      />
     </section>
   );
 }

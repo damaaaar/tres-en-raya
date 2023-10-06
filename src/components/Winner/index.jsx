@@ -16,7 +16,11 @@ function Winner(props) {
       <div className="winner-content">
         <span className="winner-span">{texto}</span>
         {winner && <Square value={winner} />}
-        <Button functionButton={functionButton} />
+        <Button
+          functionButton={functionButton}
+          text="Reiniciar juego"
+          styles="button-reset-game"
+        />
       </div>
     </section>
   );

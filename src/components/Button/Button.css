@@ -1,13 +1,25 @@
-.button {
+.button-reset-game {
   border: 0.5px solid var(--white);
   border-radius: 5px;
   padding: 1rem 2rem;
   background: var(--secundary-color);
   color: var(--white);
   transition: all 0.2s ease;
-  text-transform: uppercase;
 }
 
-.button:hover {
+.button-reset-game:hover {
+  cursor: pointer;
+}
+
+.button-reset-points {
+  border-radius: 5px;
+  border: 1px solid var(--white);
+  width: 100%;
+  padding: 1rem;
+  transition: background 0.2s ease;
+}
+
+.button-reset-points:hover {
+  background: var(--secundary-color);
   cursor: pointer;
 }

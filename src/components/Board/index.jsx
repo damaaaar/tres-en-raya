@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { TURNS } from "../../constants.js";
 import { checkWinner, checkTie } from "../../functions.js";
+import { savePointsX, savePointsO, savePointsTie } from "../../functions.js";
 import confetti from "canvas-confetti";
 
 import "./Board.css";
@@ -39,15 +40,22 @@ function Board(props) {
 
     if (newWinner) {
       if (newWinner === TURNS.X) {
-        setPointsX(pointsX + 1);
+        const newPointX = pointsX + 1;
+        setPointsX(newPointX);
+        savePointsX(newPointX);
       } else if (newWinner === TURNS.O) {
-        setPointsO(pointsO + 1);
+        const newPointO = pointsO + 1;
+        setPointsO(newPointO);
+        savePointsO(newPointO);
       }
 
+      console.log(window.localStorage);
       setWinner(newWinner);
       confetti();
     } else if (checkTie(newBoard)) {
-      setTiePoints(tiePoints + 1);
+      const newTiePoints = tiePoints + 1;
+      setTiePoints(newTiePoints);
+      savePointsTie(newTiePoints);
       setWinner(false);
     }
   };

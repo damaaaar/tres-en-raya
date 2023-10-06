@@ -17,3 +17,15 @@ export const checkWinner = (checkBoard) => {
 export const checkTie = (checkBoard) => {
   return checkBoard.every((square) => square !== null);
 };
+
+export const savePointsX = (pointsSaveX) => {
+  window.localStorage.setItem("pointsSaveX", pointsSaveX);
+};
+
+export const savePointsO = (pointsSaveO) => {
+  window.localStorage.setItem("pointsSaveO", pointsSaveO);
+};
+
+export const savePointsTie = (pointsSaveTie) => {
+  window.localStorage.setItem("pointsSaveTie", pointsSaveTie);
+};
