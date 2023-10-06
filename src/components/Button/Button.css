@@ -23,3 +23,9 @@
   background: var(--secundary-color);
   cursor: pointer;
 }
+
+@media (width < 700px) {
+  .button-reset-points:hover {
+    background: initial;
+  }
+}
