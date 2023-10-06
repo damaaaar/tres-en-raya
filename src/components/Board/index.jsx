@@ -15,6 +15,8 @@ function Board(props) {
     pointsO,
     setPointsX,
     setPointsO,
+    tiePoints,
+    setTiePoints,
   } = props;
 
   const [board, setBoard] = useState(Array(9).fill(null));
@@ -45,6 +47,7 @@ function Board(props) {
       setWinner(newWinner);
       confetti();
     } else if (checkTie(newBoard)) {
+      setTiePoints(tiePoints + 1);
       setWinner(false);
     }
   };

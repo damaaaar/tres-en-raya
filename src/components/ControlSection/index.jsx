@@ -3,7 +3,7 @@ import Player from "../Player";
 import { TURNS } from "../../constants";
 
 function ControlSection(props) {
-  const { controlTurn, pointsX, pointsO } = props;
+  const { controlTurn, pointsX, tiePoints, pointsO } = props;
 
   return (
     <section className="control">
@@ -13,6 +13,7 @@ function ControlSection(props) {
           points={pointsX}
           selected={controlTurn === TURNS.X}
         />
+        <Player turn="🏳️" points={tiePoints} selected={false} />
         <Player
           turn={TURNS.O}
           points={pointsO}
