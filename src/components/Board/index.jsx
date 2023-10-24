@@ -9,16 +9,7 @@ import Square from "../Square";
 import Winner from "../Winner/index.jsx";
 
 function Board(props) {
-  const {
-    controlTurn,
-    setControlTurn,
-    pointsX,
-    pointsO,
-    setPointsX,
-    setPointsO,
-    tiePoints,
-    setTiePoints,
-  } = props;
+  const { controlTurn, setControlTurn, pointsX, pointsO, setPointsX, setPointsO, tiePoints, setTiePoints, } = props;
 
   const [board, setBoard] = useState(Array(9).fill(null));
   const [turn, setTurn] = useState(TURNS.X);
